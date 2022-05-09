@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Moder Login Form" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body id="body" class="body" onload="onLoad();">
+    <div class="limiter">
+      <div class="center">
+        <!-- start neon background -->
+        <div class="backNeon" style="--neonColor: #2196f3">
+          <div>
+            <h2 style="--i: 1">
+              <span>&nbsp;S</span>
+              <span>O</span>
+              <span>N</span>
+              <span>E</span>
+              <span>D</span>
+              <span>E&nbsp;</span>
+            </h2>
+            <h2 style="--i: -1">
+              <div class="sml">
+                <span>&nbsp;W</span>
+                <span>E</span>
+                <span>B&nbsp;</span>
+                <span>&nbsp;M</span>
+                <span>A</span>
+                <span>I</span>
+                <span>L&nbsp;</span>
+              </div>
+            </h2>
+          </div>
+        </div>
+        <!-- end neon background -->
+        <!--<div class="contentBox">-->
+        <h1>
+          <a
+            href="https://www.zimbra.com/"
+            id="bannerLink"
+            target="_new"
+            title="Zimbra"
+          >
+          </a>
+        </h1>
+
+
+        <div class="container-login100">
+          <div class="wrap-login100">
+            <div class="hoverChar">
+              <span class="showOf">A</span>
+            </div>
+            <div class="login100-pic js-tilt" style="z-index: -1" data-tilt>
+
+            </div>
+            <form
+              name="loginForm"
+              accept-charset="UTF-8"
+              class="login100-form validate-form"
+            >
+              <span class="hit-the-floor">
+                <h2>Sonede</h2>
+                <h2>Sonede</h2>
+                <h2>Sonede</h2>
+                <h2>Sonede</h2>
+                <div>
+                  <h2 class="neonTitle">
+                    &nbsp;&nbsp;&nbsp;Login Form&nbsp;&nbsp;&nbsp;
+                  </h2>
+                </div>
+              </span>
+              <input type="hidden" name="loginOp" value="login" />
+              <input
+                type="hidden"
+                name="login_csrf"
+                value="7e22a67c-e203-405c-acbc-19db362e52b2"
+              />
+
+              <br />
+              <div></div>
+              <table class="form" id="overlay">
+                <div
+                  class="wrap-input100 validate-input"
+                  data-validate="Username is required"
+                >
+                  <input
+                    id="username"
+                    class="input100 zLoginField fancyText"
+                    name="username"
+                    type="text"
+                    value=""
+                    size="40"
+                    maxlength="1024"
+                    autocapitalize="off"
+                    autocorrect="off"
+                    placeholder="Utilisateur"
+                  />
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </span>
+                </div>
+                <div
+                  class="wrap-input100 validate-input"
+                  data-validate="Password is required"
+                >
+                  <input
+                    id="password"
+                    autocomplete="off"
+                    class="input100 zLoginField"
+                    name="password"
+                    type="password"
+                    value=""
+                    size="40"
+                    maxlength="1024"
+                    placeholder="Mot de passe"
+                  />
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                  </span>
+                </div>
+                <div class="wrap-input10 text-center p-t-12">
+                  <input
+                    id="remember"
+                    value="1"
+                    type="checkbox"
+                    name="zrememberme"
+                  />
+                  <!--<label for="remember">-->
+                  <span
+                    style="
+                      font-family: Poppins-Regular;
+                      font-size: 14px;
+                      color: white;
+                    "
+                    >Mémoriser mes valeurs d’accès</span
+                </div>
+                <div class="container-login100-form-btn">
+                  <input
+                    type="submit"
+                    class="login100-form-btn ZLoginButton DwtButton"
+                    value="Connexion"
+                  />
+                </div>
+
+                <tr>
+                  <br />
+                </tr>
+
+                <tr>
+                  <div class="positioning">
+                    <select
+                      class="form-control"
+                      id="client"
+                      name="client"
+                      onchange="clientChange(this.options[this.selectedIndex].value)"
+                      class="input-select"
+                    >
+                      <option value="preferred" selected>Par défaut</option>
+                      <option value="advanced">Évolué (Ajax)</option>
+                      <option value="standard">Standard (HTML)</option>
+                      <option value="mobile">Portable</option>
+                    </select>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <script type="text/javascript">
+                          document.write(
+                            '<a href="#" onclick="showWhatsThis();" id="ZLoginWhatsThisAnchor" aria-controls="ZLoginWhatsThis" aria-expanded="false">En savoir plus</a>'
+                          );
+                        </script>
+                        <div
+                          id="ZLoginWhatsThis"
+                          class="ZLoginInfoMessage modal"
+                          style="display: none"
+                          onclick="showWhatsThis();"
+                          role="dialog"
+                        >
+                          <div class="modal-header">
+                            <button type="button" class="close">&times;</button>
+                          </div>
+                          <h3 style="text-align: center">Types de client :</h3>
+                          L’option <b>Évolué</b> propose la gamme complète des
+                          fonctionnalités de collaboration Web. Ce client Web
+                          fonctionne plus efficacement avec les versions les
+                          plus récentes des navigateurs et une connexion
+                          Internet plus rapide. <br /><br />L’option
+                          <b>Standard</b> est conseillée avec les connexions
+                          Internet lentes, avec les versions moins récentes des
+                          navigateurs et pour les utilisateurs à accessibilité
+                          réduite. <br /><br />L’option <b>Mobile</b> est
+                          conseillée pour les terminaux mobiles.
+                          <br /><br />Pour utiliser <b>Par défaut</b> comme type
+                          de client, il suffit de modifier les options de
+                          connexion  : ouvrez une session, déroulez le menu
+                          Préférences et activez l’onglet Généralités.
+                        </div>
+                        <div
+                          id="ZLoginUnsupported"
+                          class="ZLoginInfoMessage modal"
+                          style="display: none"
+                        >
+                          <div class="modal-header">
+                            <button type="button" class="close">&times;</button>
+                          </div>
+                          Remarque : votre navigateur Web ne supporte pas toutes
+                          les caractéristiques de la version Évoluée. Dans ce
+                          cas, il est fortement conseillé d’utiliser le client
+                          Standard.
+                        </div>
+                      </div>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-3">
+                        <a href="#" onclick="openForm()">
+                          Guides
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-popup" id="myForm">
+      <div class="modal-header">
+        <button type="button" class="close" onclick="closeForm()">
+          &times;
+        </button>
+      </div>
+      <h4 class="modal-title w-100 text-center">Liens de configuration</h4>
+      <br />
+
+      <center>
+        <a href="_blank" style="font-size: small; color: #2196f3"
+          >Guide de configuration de la nouvelle messagerie éléctronique </a
+        ><br />
+        <a href="_blank" style="font-size: small; color: #2196f3"
+          >Guide d'utilisation de la nouvelle messagerie éléctronique </a
+        ><br />
+        <a href="_blank" style="font-size: small; color: #2196f3"
+          >Guide de changement du mot de passe d'un compte mail </a
+        ><br />
+        <a href="_blank" style="font-size: small; color: #2196f3"
+          >Guide d'accès à domicile à la messagerie éléctronique </a
+        ><br />
+      </center>
+    </div>
+
+    <script src="script/main.js"></script>
+
+  </body>
+</html>
